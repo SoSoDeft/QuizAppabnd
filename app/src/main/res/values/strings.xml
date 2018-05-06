@@ -1,0 +1,29 @@
+<resources>
+    xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">QuizAppabnd</string>
+    <string name="track_title">Track and Field Quiz</string>
+    <string name="question_one">The titleholder of \"fastest man in the world\" is</string>
+    <string name="edittext_hint">Enter name here</string>
+    <string name="question_two">Who is the world record holder in the women\'s 100 meter dash?</string>
+    <string name="question_three">The shoes worn by track athletes are called</string>
+    <string name="question_three_sneakers">Sneakers</string>
+    <string name="question_three_fleets">Fleets</string>
+    <string name="question_three_spikes">Spikes</string>
+    <string name="question_four">Select the options that are valid races</string>
+    <string name="question_four_100">100 meter dash</string>
+    <string name="question_four_150">150 meter dash</string>
+    <string name="question_four_200">200 meter dash</string>
+    <string name="question_four_1600">1600 meter run</string>
+    <string name="submit">submit</string>
+    <string name="reset">reset</string>
+    <string name="answer_one_toast_message">Don\'t forget to enter a name!</string>
+    <string name="answer_two_toast_message">Don\'t forget to make a selection for question 2!</string>
+    <string name="answer_three_toast_message">Don\'t forget to make a selection for question 3!</string>
+    <string name="answer_four_toast_message">Don\'t forget to make a selection for question 4!</string>
+    <string name="four_points_message">Awesome! 4 out of 4! Your are a Track and Field aficionado!</string>
+    <string name="three_points_message">Woohoo! You got 3 out of 4 correct!</string>
+    <string name="two_points_message">Welp, 2 out of 4 ain\'t bad! Better Luck next time</string>
+    <string name="one_point_message">You got 1 correct. You\'ll get \'em next time</string>
+    <string name="zero_point_message">Zero points. Shhhh... let\'s not talk about this...</string>
+    <string name="zero_point_message_missing">You seemed to have missed some items.\nTry again?</string>
+</resources>
