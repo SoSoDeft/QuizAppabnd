@@ -32,4 +32,5 @@
     <string name="flo_griffith_joyner_text">Florence Griffith Joyner</string>
     <string name="jackie_joyner_kersee_text">Jackie Joyner Kersee</string>
     <string name="image_cont_desc">Laned competition-style track</string>
+    <string name="icon_content_desc">Icon based on score</string>
 </resources>
