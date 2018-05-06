@@ -24,15 +24,20 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="Track and Field Quiz"
-        android:background="@color/colorAccent"
+        android:background="@drawable/rect_bg"
+        android:elevation="4dp"
+        android:textSize="14sp"
+        android:textStyle="bold|italic"
+        android:textAllCaps="true"
         android:layout_marginBottom="18dp"
+        android:padding="2dp"
         android:layout_alignParentBottom="true"/>
     </RelativeLayout>
      <ScrollView
         android:id="@+id/scroll_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5">
+        android:layout_weight="4">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -236,10 +241,10 @@
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/colorAccent"
         android:onClick="submitAnswers"
         android:text="@string/submit"
-        android:textColor="#fff" />
+         />
 
     <Button
         android:id="@+id/reset_button"

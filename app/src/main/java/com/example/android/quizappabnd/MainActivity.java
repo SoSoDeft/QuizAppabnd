@@ -17,6 +17,9 @@ import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
 
     // 1 point per question.  4/4 represents 100%
@@ -27,27 +30,38 @@ public class MainActivity extends AppCompatActivity {
     private int submissions = 0;
 
 
-    private EditText editTextQuestionOne;
+    // Utilize ButterKnife to allow declaration, casting, and connecting fields to resources
+    // with a single instance of code, instead of splitting.
+    // Attribution: Jake Wharton - http://jakewharton.github.io/butterknife/
 
-    private ImageView image;
+    // Bind ImageView field to resource
+    @BindView(R.id.track_image) ImageView image;
 
-    private RadioGroup rgquestion2;
+    // QUESTION ONE
+    // Initialize field for question one EditText
+    @BindView(R.id.question_one_answer) EditText editTextQuestionOne;
 
-    private RadioButton jones;
-    private RadioButton felix;
-    private RadioButton joyner;
-    private RadioButton kersee;
+    // QUESTION TWO
+    //Initialize fields for respective radio group
+    @BindView(R.id.question_two_group) RadioGroup rgquestion2;
 
-    private RadioGroup rgquestion3;
+    @BindView(R.id.question_two_answer_marion_jones) RadioButton jones;
+    @BindView(R.id.question_two_answer_allyson_felix) RadioButton felix;
+    @BindView(R.id.question_two_answer_florence_griffith_joyner) RadioButton joyner;
+    @BindView(R.id.question_two_answer_jackie_joyner_kersee) RadioButton kersee;
 
-    private RadioButton sneakers;
-    private RadioButton fleets;
-    private RadioButton spikes;
+    //QUESTION THREE
+    @BindView(R.id.question_three_group) RadioGroup rgquestion3;
 
-    private CheckBox checkBox100;
-    private CheckBox checkBox150;
-    private CheckBox checkBox200;
-    private CheckBox checkBox1600;
+    @BindView(R.id.question_three_answer_sneakers) RadioButton sneakers;
+    @BindView(R.id.question_three_answer_fleets) RadioButton fleets;
+    @BindView(R.id.question_three_answer_spikes) RadioButton spikes;
+
+    // QUESTION FOUR
+    @BindView(R.id.question_four_check_box_100) CheckBox checkBox100;
+    @BindView(R.id.question_four_check_box_150) CheckBox checkBox150;
+    @BindView(R.id.question_four_check_box_200) CheckBox checkBox200;
+    @BindView(R.id.question_four_check_box_1600) CheckBox checkBox1600;
 
 
     @Override
@@ -63,41 +77,15 @@ public class MainActivity extends AppCompatActivity {
             } // NOTE: Main Root ViewGroup set with bottom padding to allow clearance of navigation buttons
 
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this); // Every annotated target is bound
 
-        // Initialize various Views----------------------------------------------------
 
-        image = (ImageView) findViewById(R.id.track_image);
+
 
         // Use PorterDuff.Mode.Multiply to overlay grey layer
         // https://stackoverflow.com/questions/8193447/i-want-to-add-a-color-filter-to-the-imageview
         // Attribution - Sufian
         image.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
-
-        // QUESTION ONE
-        editTextQuestionOne = (EditText) findViewById(R.id.question_one_answer);
-
-        // QUESTION TWO
-        //Initialize fields for respective radio group
-        rgquestion2 = (RadioGroup) findViewById(R.id.question_two_group);
-
-        jones = (RadioButton) findViewById(R.id.question_two_answer_marion_jones);
-        felix = (RadioButton) findViewById(R.id.question_two_answer_allyson_felix);
-        joyner = (RadioButton) findViewById(R.id.question_two_answer_florence_griffith_joyner);
-        kersee = (RadioButton) findViewById(R.id.question_two_answer_jackie_joyner_kersee);
-
-        //QUESTION THREE
-        rgquestion3 = (RadioGroup) findViewById(R.id.question_three_group);
-
-        sneakers = (RadioButton) findViewById(R.id.question_three_answer_sneakers);
-        fleets = (RadioButton) findViewById(R.id.question_three_answer_fleets);
-        spikes = (RadioButton) findViewById(R.id.question_three_answer_spikes);
-
-        // QUESTION FOUR
-        checkBox100 = (CheckBox) findViewById(R.id.question_four_check_box_100);
-        checkBox150 = (CheckBox) findViewById(R.id.question_four_check_box_150);
-        checkBox200 = (CheckBox) findViewById(R.id.question_four_check_box_200);
-        checkBox1600 = (CheckBox) findViewById(R.id.question_four_check_box_1600);
-
 
     }
 
