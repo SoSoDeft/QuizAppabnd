@@ -3,9 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:fitsSystemWindows="true"
-    android:insetBottom="16dp"
     android:orientation="vertical">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,19 +16,20 @@
             android:adjustViewBounds="true"
             android:cropToPadding="false"
             android:scaleType="centerCrop"
-            android:src="@drawable/track_image" />
+        android:contentDescription="@string/image_cont_desc"
+        android:src="@drawable/track_image" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Track and Field Quiz"
+        android:layout_marginBottom="@dimen/title_margin_bottom"
         android:background="@drawable/rect_bg"
-        android:elevation="4dp"
-        android:textSize="14sp"
+        android:elevation="@dimen/title_bg_elev"
+        android:padding="@dimen/title_padding"
         android:textStyle="bold|italic"
         android:textAllCaps="true"
-        android:layout_marginBottom="18dp"
-        android:padding="2dp"
+        android:text="@string/title_text"
+        android:textSize="@dimen/title_text_size"
         android:layout_alignParentBottom="true"/>
     </RelativeLayout>
      <ScrollView
@@ -49,7 +48,7 @@
                 android:id="@+id/question_one_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/quest_one_margin_top"
                 android:padding="@dimen/question_text_view_padding"
                 android:text='@string/question_one'
                 android:textSize="@dimen/question_text"
@@ -61,7 +60,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/edit_text_view_margin"
                 android:layout_marginRight="@dimen/edit_text_view_margin"
-                android:backgroundTint="@color/colorPrimary"
                 android:hint="@string/edittext_hint"
                 android:imeOptions="actionDone"
                 android:inputType="text" />
@@ -88,14 +86,14 @@
                 android:id="@+id/question_two_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/radio_group_margin_left"
-                android:orientation="vertical">
+                android:layout_marginStart="@dimen/radio_group_margin_left"
+                android:layout_marginLeft="@dimen/radio_group_margin_left">
 
                 <RadioButton
                     android:id="@+id/question_two_answer_marion_jones"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Marion Jones"
+                    android:text="@string/marion_jones_text"
 
                     />
 
@@ -103,7 +101,7 @@
                     android:id="@+id/question_two_answer_allyson_felix"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Allyson Felix"
+                    android:text="@string/allyson_felix_text"
 
                     />
 
@@ -111,7 +109,7 @@
                     android:id="@+id/question_two_answer_florence_griffith_joyner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Florence Griffith Joyner"
+                    android:text="@string/flo_griffith_joyner_text"
 
                     />
 
@@ -119,7 +117,7 @@
                     android:id="@+id/question_two_answer_jackie_joyner_kersee"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jackie Joyner Kersee"
+                    android:text="@string/jackie_joyner_kersee_text"
 
                     />
             </RadioGroup>
@@ -146,6 +144,7 @@
                 android:id="@+id/question_three_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/radio_group_margin_left"
                 android:layout_marginLeft="@dimen/radio_group_margin_left"
                 android:orientation="vertical">
 
@@ -195,8 +194,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/chkbox_margin_left_padding_left"
+                android:layout_marginStart="@dimen/chkbox_margin_left_padding_left"
                 android:layout_marginTop="@dimen/chkbox_margin_top_padding_top"
                 android:paddingLeft="@dimen/chkbox_margin_left_padding_left"
+                android:paddingStart="@dimen/chkbox_margin_left_padding_left"
                 android:paddingTop="@dimen/chkbox_margin_top_padding_top"
                 android:text="@string/question_four_100" />
 
@@ -205,6 +206,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/chkbox_margin_left_padding_left"
+                android:layout_marginStart="@dimen/chkbox_margin_left_padding_left"
                 android:layout_marginTop="@dimen/chkbox_margin_top_padding_top"
                 android:paddingLeft="@dimen/chkbox_margin_left_padding_left"
                 android:paddingTop="@dimen/chkbox_margin_top_padding_top"
@@ -215,6 +217,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/chkbox_margin_left_padding_left"
+                android:layout_marginStart="@dimen/chkbox_margin_left_padding_left"
                 android:layout_marginTop="@dimen/chkbox_margin_top_padding_top"
                 android:paddingLeft="@dimen/chkbox_margin_left_padding_left"
                 android:paddingTop="@dimen/chkbox_margin_top_padding_top"
@@ -225,6 +228,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/chkbox_margin_left_padding_left"
+                android:layout_marginStart="@dimen/chkbox_margin_left_padding_left"
                 android:layout_marginTop="@dimen/chkbox_margin_top_padding_top"
                 android:paddingLeft="@dimen/chkbox_margin_left_padding_left"
                 android:paddingTop="@dimen/chkbox_margin_top_padding_top"
@@ -235,8 +239,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingTop="16dp"
-        android:paddingBottom="48dp">
+        android:paddingBottom="@dimen/button_views_bottom_padding"
+        android:paddingTop="@dimen/button_views_top_padding">
     <Button
         android:id="@+id/submit_button"
         android:layout_width="wrap_content"
@@ -252,8 +256,9 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#757575"
         android:layout_toRightOf="@+id/submit_button"
+        android:layout_toEndOf="@+id/submit_button"
         android:onClick="reset"
         android:text="@string/reset"
-        android:textColor="#fff" />
+        android:textColor="@android:color/white" />
     </RelativeLayout>
 </LinearLayout>

@@ -63,6 +63,10 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.question_four_check_box_200) CheckBox checkBox200;
     @BindView(R.id.question_four_check_box_1600) CheckBox checkBox1600;
 
+    // ScrollView binding
+    @BindView(R.id.scroll_view)
+    ScrollView sv;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +90,10 @@ public class MainActivity extends AppCompatActivity {
         // https://stackoverflow.com/questions/8193447/i-want-to-add-a-color-filter-to-the-imageview
         // Attribution - Sufian
         image.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
+
+
+        // Forces application to open with no answers prepopulated
+        resetCode();
 
     }
 
@@ -191,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, finalMessage(), Toast.LENGTH_LONG).show();
             submissions++;
         }
-        finalMessage(); // Trigger message method
+
     }
 
     // Reset method connected to reset button
@@ -225,7 +233,6 @@ public class MainActivity extends AppCompatActivity {
             checkBox1600.toggle();
         }
         // Create ScrollView
-        ScrollView sv = (ScrollView) findViewById(R.id.scroll_view);
         sv.fullScroll(ScrollView.FOCUS_UP); //Scroll back to top of, to start again.
 
     }
@@ -240,41 +247,41 @@ public class MainActivity extends AppCompatActivity {
             String four_point_string = getResources().getString(R.string.four_points_message);
             imgToastGold();
             message = four_point_string;
-            resetCode();
+
 
         } else if (totalPoints == 3 && attempts == 4) {
             String three_point_string = getResources().getString(R.string.three_points_message);
             imgToastSilver();
             message = three_point_string;
-            resetCode();
+
 
         } else if (totalPoints == 2 && attempts == 4) {
             String two_point_string = getResources().getString(R.string.two_points_message);
             imgToastBronze();
             message = two_point_string;
-            resetCode();
+
 
         } else if (totalPoints == 1 && attempts == 4) {
             String one_point_string = getResources().getString(R.string.one_point_message);
             imgToastDonut();
             message = one_point_string;
-            resetCode();
+
 
         } else if (totalPoints == 0 && attempts == 4) {
             String zero_point_string = getResources().getString(R.string.zero_point_message);
             imgToastDonut();
             message = zero_point_string;
-            resetCode();
+
 
         } else if (totalPoints == 0 && attempts == 0) {
             String zero_point_missing_string = getResources().getString(R.string.zero_point_message_missing);
             message = zero_point_missing_string;
-            resetCode();
+
 
         } else {
 
             message = "";
-            resetCode();
+
         }
 
         return message;

@@ -26,4 +26,10 @@
     <string name="one_point_message">You got 1 correct. You\'ll get \'em next time</string>
     <string name="zero_point_message">Zero points. Shhhh... let\'s not talk about this...</string>
     <string name="zero_point_message_missing">You seemed to have missed some items.\nTry again?</string>
+    <string name="title_text">Track and Field Quiz</string>
+    <string name="marion_jones_text">Marion Jones</string>
+    <string name="allyson_felix_text">Allyson Felix</string>
+    <string name="flo_griffith_joyner_text">Florence Griffith Joyner</string>
+    <string name="jackie_joyner_kersee_text">Jackie Joyner Kersee</string>
+    <string name="image_cont_desc">Laned competition-style track</string>
 </resources>
